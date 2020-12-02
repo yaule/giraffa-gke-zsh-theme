@@ -29,7 +29,7 @@ shell命令运行时间复制 https://github.com/caiogondim/bullet-train.zsh
 
 可以在 .zshrc中添加 theme 插件，使用 theme 命令随时切换主题
 
-`plugins=( .... theme)`
+`plugins=( .... themes)`
 
 **切换主题**
 
