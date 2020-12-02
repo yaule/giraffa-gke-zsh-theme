@@ -365,7 +365,7 @@ prompt_glcoud() {
 
 # k8s cluster and namespace
 prompt_kubecontext() {
-  if type kubectl >/dev/null 2>&1 and type kubens >/dev/null 2>&1 ; then
+  if type kubectl >/dev/null 2>&1; then
     CTX=$(kubectl config current-context)
     CNS=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${CTX}\")].context.namespace}")
     if [ -z "${CNS}" ]; then
