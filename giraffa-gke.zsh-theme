@@ -359,7 +359,7 @@ prompt_glcoud() {
     ZONE=$(gcloud info --format='value(config.properties.compute.zone)')
     prompt_segment black 033 "${GCP_ACCOUNT}::${PROJECT}::${ZONE}"
   else
-    echo "command not found: gcloud"
+    prompt_segment black 033 "command not found: gcloud"
   fi
 }
 
@@ -373,7 +373,7 @@ prompt_kubecontext() {
     fi
     prompt_segment  black 166 "${CTX}:${CNS}"
   else
-    echo "command not found: kubectl"
+    prompt_segment  black 166 "command not found: kubectl"
   fi
 }
 
