@@ -353,17 +353,28 @@ prompt_status() {
 
 # gcloud account project zone
 prompt_glcoud() {
-  GCP_ACCOUNT=$(gcloud info --format='value(config.properties.core.account)')
-  PROJECT=$(gcloud info --format='value(config.properties.core.project)')
-  ZONE=$(gcloud info --format='value(config.properties.compute.zone)')
-  prompt_segment black 033 "${GCP_ACCOUNT}::${PROJECT}::${ZONE}"
+  if type gcloud >/dev/null 2>&1 ; then
+    GCP_ACCOUNT=$(gcloud info --format='value(config.properties.core.account)')
+    PROJECT=$(gcloud info --format='value(config.properties.core.project)')
+    ZONE=$(gcloud info --format='value(config.properties.compute.zone)')
+    prompt_segment black 033 "${GCP_ACCOUNT}::${PROJECT}::${ZONE}"
+  else
+    echo "command not found: gcloud"
+  fi
 }
 
 # k8s cluster and namespace
 prompt_kubecontext() {
-CTX=$(kubectl config current-context)
-CNS=$(kubens -c)
-  prompt_segment  black 166 "${CTX}:${CNS}"
+  if type kubectl >/dev/null 2>&1 and type kubens >/dev/null 2>&1 ; then
+    CTX=$(kubectl config current-context)
+    CNS=$(kubectl config view -o=jsonpath="{.contexts[?(@.name==\"${CTX}\")].context.namespace}")
+    if [ -z "${CNS}" ]; then
+      CNS=default
+    fi
+    prompt_segment  black 166 "${CTX}:${CNS}"
+  else
+    echo "command not found: kubectl"
+  fi
 }
 
 
@@ -428,4 +439,4 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt)'

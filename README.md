@@ -14,6 +14,10 @@ shell命令运行时间复制 https://github.com/caiogondim/bullet-train.zsh
 
 `curl -L -o $ZSH_CUSTOM/themes/giraffa-gke.zsh-theme https://github.com/yaule/giraffa-gke-zsh-theme/raw/main/giraffa-gke.zsh-theme`
 
+**安装gcloud**
+
+查看官方文档安装glcoud  https://cloud.google.com/sdk/docs/install
+
 **使用主题**
 
 修改 ~/.zshrc 中 ZSH_THEME 的值
