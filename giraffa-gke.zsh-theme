@@ -2,7 +2,9 @@
 #
 # agnoster's Theme - https://gist.github.com/3712874
 # A Powerline-inspired theme for ZSH
-#
+# 
+# from http://raw.github.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme
+# from https://github.com/caiogondim/bullet-train.zsh
 # # README
 #
 # In order for this theme to render correctly, you will need a
