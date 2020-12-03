@@ -10,9 +10,21 @@ shell命令运行时间复制 https://github.com/caiogondim/bullet-train.zsh
 
 由于gcloud 和 kubectl 命令较慢，推荐在操作gcloud和k8s的时候使用此主题
 
+# girafa-mini-zsh-them
+
+去掉gcloud 和kubectl 以及一般不用的功能。
+
+**主题效果**
+
+![**girafa-gke**](http://raw.github.com/yaule/giraffa-gke-zsh-theme/master/img/girafa-gke.jpg)
+
+![**girafa-mini**](http://raw.github.com/yaule/giraffa-gke-zsh-theme/master/img/girafa-mini.jpg)
+
 **安装**
 
 `curl -L -o $ZSH_CUSTOM/themes/giraffa-gke.zsh-theme https://github.com/yaule/giraffa-gke-zsh-theme/raw/main/giraffa-gke.zsh-theme`
+
+`curl -L -o $ZSH_CUSTOM/themes/giraffa-mini.zsh-theme https://github.com/yaule/giraffa-gke-zsh-theme/raw/main/giraffa-mini.zsh-theme`
 
 **安装gcloud**
 
@@ -34,3 +46,6 @@ shell命令运行时间复制 https://github.com/caiogondim/bullet-train.zsh
 **切换主题**
 
 `theme giraffa-gke`
+
+
+
