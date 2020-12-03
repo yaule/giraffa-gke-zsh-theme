@@ -16,9 +16,13 @@ shell命令运行时间复制 https://github.com/caiogondim/bullet-train.zsh
 
 **主题效果**
 
-![**girafa-gke**](http://raw.github.com/yaule/giraffa-gke-zsh-theme/master/img/girafa-gke.jpg)
+**girafa-gke**
 
-![**girafa-mini**](http://raw.github.com/yaule/giraffa-gke-zsh-theme/master/img/girafa-mini.jpg)
+![**girafa-gke**](https://github.com/yaule/giraffa-gke-zsh-theme/raw/main/giraffa-gke.jpg)
+
+**girafa-mini**
+
+![**girafa-mini**](https://github.com/yaule/giraffa-gke-zsh-theme/raw/main/giraffa-mini.jpg)
 
 **安装**
 
